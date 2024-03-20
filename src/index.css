@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  background-color: #fff;
+}
+
+
+.h {
+
+  padding: 0.8rem 2.3rem;
+  color: black;
+  font-size: 18px;
+  border-radius: 4%;
+  box-shadow: 5px 0px 5px 0px #0000003f;
+  position: relative;
+  z-index: 1;
+  color: #fff;
+
+  cursor: pointer;
+}
+
+.h::before {
+  content: "";
+  background-color: #1f1f1f;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: all 1s;
+  z-index: -1;
+  border-radius: 4%;
+
+}
+
+.h:hover::before {
+  transform: scaleX(1);
+  border-radius: 4%;
+
+
+}
+
+.active::before {
+  color: aqua;
+  background: #000;
+
+}
+
+/*  */
+
+
+
+@media (max-width:950px) {
+
+
+  .navbarbottom-container {
+    position: relative;
+
+    z-index: 1;
+    left: 50%;
+    transform: translateX(-50%);
+    transform-origin: left;
+    padding: 0.6rem 1.6rem;
+  }
+
+  .h {
+    padding: 0.9rem 0.8rem;
+  }
+}
+
+@media (max-width:550px) {
+
+
+  .navbarbottom-container {
+    padding: 0.8rem 1.5rem;
+    gap: 0.5rem;
+  }
+
+  .h {
+    padding: 0.4rem 0.7rem;
+  }
+
+}
+
+
+@media (max-width:420px) {
+
+
+  .navbarbottom-container {
+    padding: 0.5rem 1.3rem;
+    gap: 0.5rem;
+    z-index: 1;
+  }
+
+  .h {
+    padding: 0.2rem 0.5rem;
+  }
+
+}
